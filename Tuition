@@ -1,0 +1,28 @@
+
+public class TuitionCalc {
+
+	public static void main(String[] args) {
+		double tuition = 10000, totalTuition = 0; 
+		final double  INCREASE = 0.05;
+		System.out.println("-----------------------------\n" + 
+		 "    Year   |  Tuition    \n" +
+				"-----------------------------");
+		final double YEAR = 14;
+		for (int i = 1; i <= YEAR; i++) {
+			if (i <= 10) {
+				System.out.printf("   %d\t   |\t  $%.2f\t\n", i, tuition);
+				
+			}
+			
+			else {
+				totalTuition += tuition;
+			}
+			tuition += tuition * INCREASE;
+		}
+		System.out.println("-----------------------------");
+		System.out.printf("Tuition total from year 11 to 14 is: $%.2f \n" ,totalTuition);
+		
+
+	}
+
+}
