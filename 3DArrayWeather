@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Weather3DArray {
+
+	public static void main(String[] args) {
+		double [][][] data = new double[2][4][2];
+		Scanner in = new Scanner(System.in);
+		
+		
+		for (int days = 0; days < data.length; days++) {
+			for (int reading = 0; reading <data[days].length; reading++) {
+				for(int sample =0; sample < data[days][reading].length; sample++)
+				{
+					System.out.printf("Enter the value for day %d reading %d\n",
+					days, reading);
+					System.out.println("Enter the temperature for sample 0");
+					System.out.println("Enter the humidity for sample 1");
+					System.out.printf("The sample number is %d\n", sample);
+					data[days][reading][sample] = in .nextDouble();
+				}
+			}
+		}
+		
+		
+		
+		double sum = 0.0;
+		for (int days = 0; days < data.length; days++) {
+			for (int reading = 0; reading <data[days].length; reading++) {
+				sum += data[days][reading][0];
+				
+			}
+		}
+		double average = sum /(data.length * data[0].length);
+		System.out.printf("The average temperature was %7.2f\n", average);
+		in.close();
+
+	}
+
+}
