@@ -1,0 +1,22 @@
+
+public class PatternHw {
+
+	public static void main(String[] args) {
+		displayPattern(3);
+	}
+	public static void displayPattern(int n) {
+		int count = n - 1;
+		for (int i = 1; i <= n; i++ ) {
+			
+			for (int count2 = 0; count2 < count; count2++) {
+				System.out.println(" ");
+			}
+			for (int count3 = i; count3 > 0; count3--) {
+				System.out.print(count3 + " ");
+			}
+			System.out.println();
+			count--;
+		}
+	}
+
+}
