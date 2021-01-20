@@ -1,0 +1,21 @@
+public class MilesToKilos {
+
+	public static void main(String[] args) {
+		System.out.println("|\tMiles |\t Kilometers     |\tKilometers  |\tMiles |\t\n" +
+				"---------------------------------------------------------------");
+		int count = 21;
+		for (int i = 1; i < count; i++) {
+			
+			int kilosMiles = (i * 5);
+			double km = (i*5/1.609);
+			
+			
+	
+				System.out.printf("\t%d\t ->   %.2f\t |\t%d     ->  \t%.2f\n  ",i,(i * 1.609), kilosMiles,km);
+			}
+			
+		
+
+	}
+
+}
