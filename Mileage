@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class MilageCalculator {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		float totalMiles = 0.0f;
+		float miles;
+		int totalDays,day;
+		
+		
+		System.out.println("Enter the total days of driving");
+		totalDays = in.nextInt();
+		day = 1;
+		while(day <= totalDays){
+			System.out.println("Enter the miles driven on day " + day);
+			miles = in.nextFloat();
+			totalMiles = totalMiles + miles;
+			System.out.printf("total miles driven so far %5.2f on day %d\n", totalMiles, day);
+			day++;
+		}
+		System.out.printf("total miles driven %5.2f\n", totalMiles);
+		in.close();
+
+	}
+
+}
