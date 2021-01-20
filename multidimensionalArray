@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class MultidimensionalArrayHw {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		 
+		System.out.print("Enter the rows of the array: ");
+		int rows = input.nextInt();
+		System.out.print("Enter the col of the array: ");
+		int col = input.nextInt();
+		double [][] numbers = new double [rows][col];
+		System.out.printf("Enter Array Elements: ", rows, col);
+		
+		for ( int i =0; i < numbers.length;i++) 
+		{
+			for ( int j = 0; j < numbers[i].length; j++) 
+			{
+				numbers[i][j] = input.nextDouble();
+				
+			}
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	int [] intPlace = locateLargest(numbers);
+	System.out.printf("the largest element is: (%d, %d)\n", intPlace[0],intPlace[1]);
+						
+	}
+	public static int [] locateLargest(double [][]a) {
+		int []intPlace = new int[] {0,0};
+		double max = a [0][0];
+		for (int i = 0; i < a.length; i++) {
+			for( int j =0; j < a[i].length; j++) {
+				if(max < a[i][j]) {
+					max = a[i][j];
+					intPlace[0]=i;
+					intPlace[1] = j;
+				}
+			}
+		}
+		return intPlace;
+	}
+	}
